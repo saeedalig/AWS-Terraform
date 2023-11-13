@@ -1,0 +1,12 @@
+# Local .terraform directory
+**/.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.backup
+
+# .tfvars files (if used to store variable values)
+*.tfvars
+
+# Crash log files, which can contain sensitive information
+crash.log
