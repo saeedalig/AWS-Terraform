@@ -4,6 +4,8 @@
 # .tfstate files
 *.tfstate
 *.tfstate.backup
+.terraform.lock.hcl
+
 
 # .tfvars files (if used to store variable values)
 #*.tfvars
