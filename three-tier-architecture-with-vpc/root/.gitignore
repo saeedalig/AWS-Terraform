@@ -6,7 +6,7 @@
 *.tfstate.backup
 
 # .tfvars files (if used to store variable values)
-*.tfvars
+#*.tfvars
 
 # Crash log files, which can contain sensitive information
 crash.log

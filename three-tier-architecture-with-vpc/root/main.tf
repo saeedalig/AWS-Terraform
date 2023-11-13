@@ -12,10 +12,12 @@ module "vpc" {
 module "nat" {
   source      = "../modules/nat"
   name        = module.vpc.name
-  pri_sub_ids = module.vpc.pri_sub_ids
+  vpc_id      = module.vpc.vpc_id
   pub_sub_ids = module.vpc.pub_sub_ids
+  pri_sub_ids = module.vpc.pri_sub_ids
   db_sub_ids  = module.vpc.db_sub_ids
   igw_id      = module.vpc.igw_id
+
 }
 
 # Create Security Group Module
