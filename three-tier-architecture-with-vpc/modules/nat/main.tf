@@ -32,7 +32,7 @@ resource "aws_route_table" "pri_rt" {
   }
 
   tags   = {
-    Name ="${var.name}-Pri-RT-az1"
+    Name ="${var.name}-Pri-RT"
   }
 }
 
@@ -43,12 +43,15 @@ resource "aws_route_table_association" "pri_rta" {
   route_table_id = aws_route_table.pri_rt.id
 }
 
-# Create Private Route Table-2
+# Create Private Route Table-2 for Database Subnets
 resource "aws_route_table" "db_rt" {
   vpc_id = var.vpc_id
   route {
     cidr_block = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.nat-az1.id
+  }
+  tags   = {
+    Name ="${var.name}-db-RT"
   }
 }
 

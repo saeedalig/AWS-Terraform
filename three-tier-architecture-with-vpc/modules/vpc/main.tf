@@ -59,7 +59,7 @@ resource "aws_route_table" "pub-rt" {
     gateway_id = aws_internet_gateway.igw.id
   }
   tags = {
-    Name = "${var.name}-Pub-RT"
+    Name = "${var.name}-pub-RT"
   }
 }
 
