@@ -30,8 +30,9 @@ module "security_group" {
 
 # Bastion Host EC2
 module "bastion-host-ec2" {
-  source = "./modules/EC2"
-  name = module.vpc.name
-  pub_sub_ids = module.vpc.pub_sub_ids
+  source        = "./modules/EC2-Bastion-Host"
+  name          = module.vpc.name
+  vpc_id        = module.vpc.vpc_id
+  pub_sub_ids   = module.vpc.pub_sub_ids
   bastion_sg_id = module.security_group.bastion_sg_id
 }

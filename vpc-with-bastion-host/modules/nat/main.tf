@@ -1,8 +1,8 @@
 # EIP-1 in for NAT-1 in az1
-resource "aws_eip" "eip_nat_az1" {
+resource "aws_eip" "eip_nat" {
   domain = "vpc"
   tags = {
-    Name = "${var.name}-eip-az1"
+    Name = "${var.name}-eip-nat"
   }
 }
 
@@ -10,7 +10,7 @@ resource "aws_eip" "eip_nat_az1" {
 # Create a Nat-1 in Public Subnet-az1
 resource "aws_nat_gateway" "nat-az1" {
   # count = length(var.pub_sub_ids)
-  allocation_id = aws_eip.eip_nat_az1.id
+  allocation_id = aws_eip.eip_nat.id
   subnet_id     = var.pub_sub_ids[0]
 
   tags = {
