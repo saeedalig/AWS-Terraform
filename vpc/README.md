@@ -66,9 +66,10 @@ Designed specifically for hosting database instances in private subnets restrict
 
 1. Clone the repository:
    ```bash
-  git clone https://github.com/saeedalig/AWS-Terraform.git
-  cd vpc
-  ```
+   git clone https://github.com/saeedalig/AWS-Terraform.git
+   # Navigate to dir
+   cd vpc
+   ```
 
 2. Initialize Terraform:
   ```bash
