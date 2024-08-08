@@ -42,11 +42,11 @@ Designed specifically for hosting database instances in private subnets restrict
 
 
 ## Terraform Concepts Used
-- 1. **Resource Block:** Most fundamental block to create resources in any cloud provider.
-- 2. **Variables:** Defines input parameters for your Terraform configurations.
-- 3. **Locals:**  Used to assign values to local variables, which can simplify complex expressions.
-- 4. **Data Source:** Used to query existing information about AWS resources, such as availability zones
-- 5. **Dynamic Subnets Creation:** The `count` parameter is used in resource blocks to create multiple instances of a resource dynamically. This is particularly useful for creating subnets across multiple availability zones Example: Creating public subnets dynamically based on the number of availability zones:
+-  **Resource Block:** Most fundamental block to create resources in any cloud provider.
+-  **Variables:** Defines input parameters for your Terraform configurations.
+-  **Locals:**  Used to assign values to local variables, which can simplify complex expressions.
+-  **Data Source:** Used to query existing information about AWS resources, such as availability zones
+-  **Dynamic Subnets Creation:** The `count` parameter is used in resource blocks to create multiple instances of a resource dynamically. This is particularly useful for creating subnets across multiple availability zones Example: Creating public subnets dynamically based on the number of availability zones:
     ```hcl
     resource "aws_subnet" "public_subnets" {
       count = length(data.aws_availability_zones.azs.names)
