@@ -32,7 +32,7 @@ This documentation describes the setup of an Auto Scaling Group (ASG) and an App
 
 - **ALB Security Group:** Manages incoming traffic to the load balancer and controls which sources can access it, as well as allowing outbound traffic to the target group.
 
-**ASG Security Group:** Manages incoming traffic to EC2 instances launched by the ASG, typically allowing only traffic from the ALB and managing outbound traffic based on application needs.
+- **ASG Security Group:** Manages incoming traffic to EC2 instances launched by the ASG, typically allowing only traffic from the ALB and managing outbound traffic based on application needs.
 
 
 ### 4. **Target Group**
@@ -65,14 +65,14 @@ This documentation describes the setup of an Auto Scaling Group (ASG) and an App
 - **High Availability**: The ALB distributes traffic across multiple instances, improving fault tolerance and uptime.
 - **Automation**: Terraform automates the provisioning and management of infrastructure, reducing manual effort and potential for errors.
 
-
 ## Usage
 
 1. Clone the repository:
    ```bash
-  git clone https://github.com/saeedalig/AWS-Terraform.git
-  cd asg
-  ```
+   git clone https://github.com/saeedalig/AWS-Terraform.git
+   # Navigate to dir
+   cd asg
+   ```
 
 2. Initialize Terraform:
   ```bash
@@ -87,6 +87,7 @@ This documentation describes the setup of an Auto Scaling Group (ASG) and an App
   ```bash
   terraform apply
   ```
+
 
 
 ## Conclusion
